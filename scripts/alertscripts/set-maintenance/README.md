@@ -30,16 +30,17 @@ The script can be executed from the Zabbix interface or directly from the comman
 To run the script manually, use the following command:
 
 ```
-/path/to/set_maintenance.py <CONFIG_FILE> <HOST> [OPTIONS]
+/path/to/set_maintenance.py <CREDENTIALS_FILE> <HOST> [OPTIONS]
 ```
 
-- `<CONFIG_FILE>`: The path to the configuration file containing Zabbix server URL and [API token](https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/api_tokens). The file should be in `.ini` format with a section `[zabbix]` for these variables:
+- `<CREDENTIALS_FILE>`: The path to the configuration file containing Zabbix server URL and [API token](https://www.zabbix.com/documentation/current/en/manual/web_interface/frontend_sections/users/api_tokens). The file should be in `.ini` format with a section `[zabbix]` for these variables:
   - `SERVER`: The URL of your Zabbix server, including the correct protocol (`http` or `https`)
   - `TOKEN_AUTH`: Your Zabbix API token
 - `<HOST>`: The technical name of the host for which the maintenance period is being created
 
 **Options:**
 
+- `-h, --help`: Displays help information for the script
 - `--period <SECONDS>`: Sets the duration of the maintenance period in seconds. This option is optional; if not provided, the default value is 3600 seconds (1 hour)
 - `--no-data-collection`: If this option is specified, the maintenance period will be created without data collection. By default, data collection is enabled
 - `--hostgroup`: When included, the script creates a maintenance period for the smallest host group that the specified host belongs to. If not specified, the maintenance period will be created only for the given host
