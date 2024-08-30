@@ -6,7 +6,7 @@ servers, virtual machines, and cloud services. Zabbix collects and displays basi
 This repository contains a collection of custom scripts for Zabbix. 
 These scripts include various utilities and automations, including those that can be triggered directly from the Zabbix interface.
 
-All scripts for Zabbix version: 7.0 and higher.
+All scripts for Zabbix version: 6.0 and higher.
 
 ## Installation
 
